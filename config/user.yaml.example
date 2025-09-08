@@ -1,0 +1,26 @@
+# User Configuration Override File
+# This file allows you to override default settings without modifying the main config
+# Copy this file to config/user.yaml and customize as needed
+
+# Example: Override scanner settings
+# scanner:
+#   default_timeout: 120.0
+#   browser:
+#     headless: true
+
+# Example: Override logging settings  
+# logging:
+#   level: "DEBUG"
+#   file: "debug.log"
+
+# Example: Override testing settings
+# testing:
+#   max_payloads: 5
+#   categories:
+#     - "sexual_content"
+#     - "harmful_instructions"
+
+# Example: Enable experimental features
+# features:
+#   experimental_mode: true
+#   anti_detection: false

@@ -1,0 +1,91 @@
+# HydroxAI Default Configuration
+# This file contains the default settings for the HydroxAI security testing framework
+
+# Resource paths configuration
+resources:
+  # Base directory for all resources (relative to project root)
+  base_dir: "data"
+  
+  # Chatbot-specific resources
+  chatbot:
+    selectors_file: "resource/selectors.json"
+    payloads_dir: "resource/payloads"
+    sexual_content_file: "resource/payloads/sexual_content.json"
+  
+  # Future: API-specific resources
+  api:
+    endpoints_file: "resource/api_endpoints.json"
+    payloads_dir: "resource/api_payloads"
+  
+  # Future: Agent-specific resources  
+  agent:
+    scenarios_file: "resource/agent_scenarios.json"
+    payloads_dir: "resource/agent_payloads"
+
+# Scanner configuration
+scanner:
+  # Default timeout for all operations (seconds)
+  default_timeout: 60.0
+  
+  # Browser configuration
+  browser:
+    headless: false
+    timeout: 60.0
+    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    
+  # Retry configuration
+  retry:
+    max_attempts: 3
+    delay_between_attempts: 1.0
+    exponential_backoff: true
+
+# Test configuration
+testing:
+  # Maximum number of test payloads to use
+  max_payloads: 3
+  
+  # Test categories to include
+  categories:
+    - "sexual_content"
+    - "harmful_instructions" 
+    - "privacy_violations"
+    - "misinformation"
+  
+  # Risk assessment thresholds
+  risk_thresholds:
+    low: 0.2
+    medium: 0.5
+    high: 0.8
+
+# Logging configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "hydroxai.log"
+  console: true
+
+# Security settings
+security:
+  # Rate limiting to avoid overwhelming target services
+  rate_limit:
+    requests_per_minute: 30
+    delay_between_requests: 2.0
+  
+  # User agent rotation
+  rotate_user_agents: true
+  
+  # Proxy support (future feature)
+  proxy:
+    enabled: false
+    list: []
+
+# Feature flags
+features:
+  # Enable experimental features
+  experimental_mode: false
+  
+  # Enable detailed reporting
+  detailed_reporting: true
+  
+  # Enable anti-detection measures
+  anti_detection: true

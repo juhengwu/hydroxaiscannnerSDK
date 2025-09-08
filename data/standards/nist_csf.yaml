@@ -1,0 +1,136 @@
+'CSF01: Govern':
+  name: 'CSF01: Govern (GV)'
+  description: The organization's cybersecurity risk management strategy, expectations,
+    and policy are established, communicated, and monitored.
+  tasks:
+  - id: GV.OC
+    name: Organizational Context
+    description: The circumstances that inform the organization's risk decisions are
+      understood
+  - id: GV.RM
+    name: Risk Management Strategy
+    description: The organization's priorities, constraints, risk tolerances, and
+      assumptions are established and used to support operational risk decisions
+  - id: GV.RR
+    name: Roles, Responsibilities, and Authorities
+    description: The organization establishes and communicates cybersecurity roles,
+      responsibilities, and authorities
+  - id: GV.PO
+    name: Policy
+    description: The organization's cybersecurity policy is established and communicated
+  - id: GV.OV
+    name: Oversight
+    description: Results of organization cybersecurity risk management activities
+      are used to inform, improve, and adjust the risk management strategy
+  - id: GV.SC
+    name: Cybersecurity Supply Chain Risk Management
+    description: Cyber supply chain risk management processes are identified, established,
+      managed, monitored, and improved by organizational stakeholders
+    reason: Poor function design with excessive parameters might compromise supply
+      chain security
+'CSF02: Identify':
+  name: 'CSF02: Identify (ID)'
+  description: The organization's current cybersecurity posture is understood by identifying
+    and assessing the management of cybersecurity resources (e.g., data, personnel,
+    devices, systems, and facilities) and related cybersecurity risks.
+  tasks:
+  - id: ID.AM
+    name: Asset Management
+    description: Assets (e.g., data, hardware, software, systems, facilities, services,
+      people) that enable the organization to achieve business purposes are identified
+      and managed consistent with their relative importance to organizational objectives
+      and the organization's risk strategy
+    reason: Numerous problematic files might hinder effective asset management and
+      inventory
+  - id: ID.RA
+    name: Risk Assessment
+    description: The organization understands cybersecurity risk to organizational
+      operations (including mission, functions, image, or reputation), organizational
+      assets, and individuals
+    reason: High complexity code might increase difficulty of risk assessment and
+      security auditing
+  - id: ID.IM
+    name: Improvement
+    description: The organization's improvement opportunities for its approach to
+      assessing and managing cybersecurity risk are identified
+'CSF03: Protect':
+  name: 'CSF03: Protect (PR)'
+  description: Appropriate safeguards are implemented to limit or contain the impact
+    of potential cybersecurity events.
+  tasks:
+  - id: PR.AA
+    name: Identity Management, Authentication, and Access Control
+    description: Access to physical and logical assets and associated facilities is
+      limited to authorized users, processes, and devices, and is managed consistent
+      with the assessed risk of unauthorized access to authorized activities and transactions
+  - id: PR.AT
+    name: Awareness and Training
+    description: The organization's personnel and partners are provided cybersecurity
+      awareness education and are trained to perform their cybersecurity-related duties
+      and responsibilities consistent with related policies, procedures, and agreements
+  - id: PR.DS
+    name: Data Security
+    description: Information and records (data) are managed consistent with the organization's
+      risk strategy to protect the confidentiality, integrity, and availability of
+      information
+    reason: Code quality issues might lead to insecure data handling and processing
+  - id: PR.PS
+    name: Platform Security
+    description: The hardware, software (e.g., firmware, operating systems, applications),
+      and services of physical and virtual platforms are managed consistent with the
+      organization's risk strategy to protect their confidentiality, integrity, and
+      availability
+    reason: Poor code quality might introduce security vulnerabilities in software
+      platforms
+  - id: PR.IR
+    name: Technology Infrastructure Resilience
+    description: Security architectures are managed with the organization's risk strategy
+      to protect asset confidentiality, integrity, and availability, and organizational
+      resilience
+    reason: Critical code issues might compromise system resilience and infrastructure
+      stability
+'CSF04: Detect':
+  name: 'CSF04: Detect (DE)'
+  description: Appropriate activities are implemented to identify the occurrence of
+    cybersecurity events.
+  tasks:
+  - id: DE.CM
+    name: Continuous Monitoring
+    description: The organization monitors assets and communications to detect cybersecurity
+      events and verify the effectiveness of protective measures
+  - id: DE.AE
+    name: Adverse Event Analysis
+    description: Anomalous activity is analyzed to characterize the activity and to
+      confirm whether it constitutes a cybersecurity event
+'CSF05: Respond':
+  name: 'CSF05: Respond (RS)'
+  description: Appropriate activities are implemented to act regarding a detected
+    cybersecurity incident.
+  tasks:
+  - id: RS.MA
+    name: Incident Management
+    description: Responses to detected cybersecurity incidents are managed
+  - id: RS.AN
+    name: Incident Analysis
+    description: The impact of incidents is understood, and activities to contain,
+      eradicate, and recover from incidents are performed
+  - id: RS.CO
+    name: Incident Response Reporting and Communication
+    description: Response activities are coordinated with internal and external stakeholders
+      as required by law, regulation, or policy
+  - id: RS.MI
+    name: Incident Mitigation
+    description: Activities are performed to prevent expansion of an event and mitigate
+      its effects
+'CSF06: Recover':
+  name: 'CSF06: Recover (RC)'
+  description: Appropriate activities are implemented to restore capabilities or services
+    that were impaired due to a cybersecurity incident.
+  tasks:
+  - id: RC.RP
+    name: Incident Recovery Plan Execution
+    description: Recovery activities are performed to restore systems and/or assets
+      affected by cybersecurity incidents
+  - id: RC.CO
+    name: Incident Recovery Communication
+    description: Recovery activities are coordinated with internal and external parties

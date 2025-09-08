@@ -1,0 +1,40 @@
+[
+  {
+    "url": "https://wule.ai",
+    "input_steps": ["textarea[placeholder=\"询问任何问题，或搜寻整个空间\"]"],
+    "send_button": "gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input shadow-sm hover:text-accent-foreground px-4 py-2 flex items-center justify-center w-10 h-8 rounded-lg cursor-pointer flex-shrink-0 bg-blue-500 hover:bg-blue-600 text-white",
+    "response_steps": [
+      "mdx-content prose-headings:font-bold prose-h1:text-2xl prose-h2:text-xl prose-h3:text-lg prose-p:text-base prose-ul:list-disc prose-ol:list-decimal"
+    ],
+    "login_require": false
+  },
+  {
+    "url": "https://chatgpt.com",
+    "input_steps": ["#prompt-textarea"],
+    "send_button": "composer-submit-button",
+    "response_steps": ["[data-message-author-role='assistant']"],
+    "login_require": false
+  },
+  {
+    "url": "https://www.perplexity.ai/",
+    "input_steps": ["#ask-input"],
+    "send_button": "[data-testid=\"submit-button\"]",
+    "response_steps": [".prose.text-pretty.dark\\:prose-invert"],
+    "login_require": false
+  },
+  {
+    "url": "https://deepai.org/chat",
+    "input_steps": ["[persistentChatbox]"],
+    "send_button": "[chatSubmitButton]",
+    "response_steps": ["markdownContainer"],
+    "login_require": false
+  },
+  {
+    "url": "https://fin.ai",
+    "chatbot_widget": ["intercom-bzcs20 e1j0ryx0"],
+    "input_steps": ["intercom-bzcs20 e1j0ryx0"],
+    "send_button": "[intercom-composer-send-button e5mgu3j0 intercom-14suzfn etxngei0]",
+    "response_steps": ["intercom-block-paragraph e16pl8n50 intercom-1483pmu"],
+    "login_require": false
+  }
+]

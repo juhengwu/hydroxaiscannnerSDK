@@ -1,0 +1,539 @@
+'TA0001: Reconnaissance':
+  name: 'TA0001: Reconnaissance'
+  description: The adversary is trying to gather information about AI systems, datasets,
+    and infrastructure that can be used to plan future operations.
+  tasks:
+  - id: AML.T0000
+    name: SEARCH OPEN TECHNICAL DATABASES
+    description: Adversaries may search and gather information about AI systems from
+      publicly available technical databases, research papers, and documentation.
+    outcome: Intelligence gathered on target AI system architecture and vulnerabilities
+    mitre_attack:
+    - T1595.002
+  - id: AML.T0001
+    name: SEARCH OPEN AI VULNERABILITY ANALYSIS
+    description: Adversaries may search for published vulnerability research, security
+      analyses, and exploit documentation related to AI/ML systems.
+    outcome: Known vulnerabilities and attack vectors identified for target AI systems
+    mitre_attack:
+    - T1595.002
+  - id: AML.T0003
+    name: SEARCH VICTIM-OWNED WEBSITES
+    description: Adversaries may search websites owned by a victim organization to
+      gather information about their AI implementations, models, and infrastructure.
+    outcome: Target-specific AI system information and potential attack surfaces identified
+    mitre_attack:
+    - T1594
+  - id: AML.T0004
+    name: SEARCH APPLICATION REPOSITORIES
+    description: Adversaries may search public and private code repositories for AI/ML
+      applications, model implementations, and configuration details.
+    outcome: Source code, model architectures, and implementation details obtained
+    mitre_attack:
+    - T1593.003
+  - id: AML.T0006
+    name: ACTIVE SCANNING
+    description: Adversaries may execute active reconnaissance scans to gather information
+      about AI service endpoints, APIs, and network infrastructure.
+    outcome: Active AI services, endpoints, and network topology mapped
+    mitre_attack:
+    - T1595.001
+  - id: AML.T0064
+    name: GATHER RAG-INDEXED TARGETS
+    description: Adversaries may identify and gather information about Retrieval-Augmented
+      Generation (RAG) systems and their indexed content sources.
+    outcome: RAG system architecture and indexed data sources identified for potential
+      exploitation
+    mitre_attack:
+    - T1595.002
+'TA0002: Resource Development':
+  name: 'TA0002: Resource Development'
+  description: The adversary is trying to establish resources they can use to support
+    operations against AI systems.
+  tasks:
+  - id: AML.T0002
+    name: ACQUIRE PUBLIC AI ARTIFACTS
+    description: Adversaries may acquire publicly available AI models, datasets, and
+      tools to support their operations against target AI systems.
+    outcome: AI artifacts obtained for analysis, modification, or use in attacks
+    mitre_attack:
+    - T1588.002
+  - id: AML.T0016
+    name: OBTAIN CAPABILITIES
+    description: Adversaries may purchase, lease, or otherwise obtain AI-specific
+      attack capabilities and tools from third parties.
+    outcome: Specialized AI attack capabilities acquired for operational use
+    mitre_attack:
+    - T1588
+  - id: AML.T0017
+    name: DEVELOP CAPABILITIES
+    description: Adversaries may develop custom AI attack tools, adversarial examples,
+      or specialized capabilities for targeting AI systems.
+    outcome: Custom AI attack capabilities developed and ready for deployment
+    mitre_attack:
+    - T1587
+  - id: AML.T0008
+    name: ACQUIRE INFRASTRUCTURE
+    description: Adversaries may buy, lease, or rent infrastructure that can be used
+      during targeting of AI systems, including compute resources for model training
+      or inference.
+    outcome: Infrastructure acquired to support AI-targeted attack operations
+    mitre_attack:
+    - T1583
+  - id: AML.T0019
+    name: PUBLISH POISONED DATASETS
+    description: Adversaries may create and publish datasets containing malicious
+      or biased data to public repositories for later use in supply chain attacks.
+    outcome: Poisoned datasets published and available for victim consumption
+    mitre_attack:
+    - T1587.001
+  - id: AML.T0020
+    name: POISON TRAINING DATA
+    description: Adversaries may inject malicious data into training datasets or data
+      pipelines to influence model behavior during training.
+    outcome: Training data compromised to influence target model behavior
+    mitre_attack:
+    - T1565.001
+  - id: AML.T0021
+    name: ESTABLISH ACCOUNTS
+    description: Adversaries may create accounts on AI platforms, model repositories,
+      or data sharing services to facilitate their operations.
+    outcome: Accounts established on AI platforms for operational use
+    mitre_attack:
+    - T1585
+  - id: AML.T0058
+    name: PUBLISH POISONED MODELS
+    description: Adversaries may create and publish AI models with hidden malicious
+      behavior to public model repositories for distribution.
+    outcome: Malicious models published and available for victim download and use
+    mitre_attack:
+    - T1587.001
+  - id: AML.T0060
+    name: PUBLISH HALLUCINATED ENTITIES
+    description: Adversaries may create and publish false information or entities
+      designed to be indexed by RAG systems and influence their outputs.
+    outcome: False information entities published for RAG system consumption
+    mitre_attack:
+    - T1587.001
+  - id: AML.T0065
+    name: LLM PROMPT CRAFTING
+    description: Adversaries may develop and test prompts designed to manipulate Large
+      Language Model behavior, extract information, or bypass safety measures.
+    outcome: Malicious prompts crafted and tested for LLM exploitation
+    mitre_attack:
+    - T1587.001
+  - id: AML.T0066
+    name: RETRIEVAL CONTENT CRAFTING
+    description: Adversaries may craft specific content designed to be retrieved and
+      used by RAG systems to influence their responses.
+    outcome: Malicious content crafted for RAG system retrieval and influence
+    mitre_attack:
+    - T1587.001
+  - id: AML.T0079
+    name: STAGE CAPABILITIES
+    description: Adversaries may upload, install, or otherwise set up capabilities
+      that can be used during targeting of AI systems.
+    outcome: AI attack capabilities staged and ready for operational deployment
+    mitre_attack:
+    - T1608
+'TA0003: Initial Access':
+  name: 'TA0003: Initial Access'
+  description: The adversary is trying to get into AI systems or AI-enabled environments
+    through various entry points.
+  tasks:
+  - id: AML.T0010
+    name: AI SUPPLY CHAIN COMPROMISE
+    description: Adversaries may manipulate AI models, datasets, or components within
+      the supply chain to gain initial access to target systems.
+    outcome: Initial access gained through compromised AI supply chain components
+    mitre_attack:
+    - T1195
+  - id: AML.T0012
+    name: VALID ACCOUNTS
+    description: Adversaries may obtain and abuse credentials of existing accounts
+      to gain initial access to AI systems and services.
+    outcome: Initial access gained using legitimate account credentials
+    mitre_attack:
+    - T1078
+  - id: AML.T0015
+    name: EVADE AI MODEL
+    description: Adversaries may craft inputs designed to evade AI-based security
+      controls and detection systems to gain initial access.
+    outcome: AI security controls bypassed to gain initial system access
+    mitre_attack:
+    - T1211
+  - id: AML.T0049
+    name: EXPLOIT PUBLIC-FACING APPLICATION
+    description: Adversaries may attempt to exploit vulnerabilities in public-facing
+      AI applications or services to gain initial access.
+    outcome: Initial access gained through exploitation of public AI application vulnerabilities
+    mitre_attack:
+    - T1190
+  - id: AML.T0052
+    name: PHISHING
+    description: Adversaries may send phishing messages to gain access to AI systems,
+      often targeting users with administrative access to AI platforms.
+    outcome: Initial access gained through successful phishing attack targeting AI
+      system users
+    mitre_attack:
+    - T1566
+  - id: AML.T0078
+    name: DRIVE-BY COMPROMISE
+    description: Adversaries may gain access to AI systems by compromising websites
+      or online services that AI systems access or users visit.
+    outcome: Initial access gained through drive-by compromise affecting AI system
+      users or services
+    mitre_attack:
+    - T1189
+'TA0004: AI Model Access':
+  name: 'TA0004: AI Model Access'
+  description: The adversary is trying to gain access to AI models through various
+    access methods and interfaces.
+  tasks:
+  - id: AML.T0040
+    name: AI MODEL INFERENCE API ACCESS
+    description: Adversaries may gain access to AI models through inference APIs,
+      either legitimate or compromised access points.
+    outcome: Access to AI model inference capabilities through API interfaces
+    mitre_attack:
+    - T1078.004
+  - id: AML.T0047
+    name: AI-ENABLED PRODUCT OR SERVICE
+    description: Adversaries may access AI models embedded within products or services
+      through normal user interfaces or hidden functionalities.
+    outcome: Access to AI models through product or service interfaces
+    mitre_attack:
+    - T1078
+  - id: AML.T0041
+    name: PHYSICAL ENVIRONMENT ACCESS
+    description: Adversaries may gain physical access to AI model hosting infrastructure,
+      edge devices, or local AI implementations.
+    outcome: Physical access to AI model infrastructure and hardware
+    mitre_attack:
+    - T1200
+  - id: AML.T0044
+    name: FULL AI MODEL ACCESS
+    description: Adversaries may obtain complete access to AI model weights, architecture,
+      and training data through various means.
+    outcome: Complete access to AI model parameters, architecture, and associated
+      data
+    mitre_attack:
+    - T1005
+'TA0005: Execution':
+  name: 'TA0005: Execution'
+  description: The adversary is trying to run malicious code or commands within AI
+    systems or through AI-mediated interfaces.
+  tasks:
+  - id: AML.T0011
+    name: USER EXECUTION
+    description: Adversaries may rely on users to execute malicious actions through
+      AI interfaces or by manipulating AI-generated content.
+    outcome: Malicious actions executed through user interaction with AI systems
+    mitre_attack:
+    - T1204
+  - id: AML.T0050
+    name: COMMAND AND SCRIPTING INTERPRETER
+    description: Adversaries may abuse command and script interpreters accessible
+      through AI systems to execute commands or scripts.
+    outcome: Commands or scripts executed through AI-accessible interpreters
+    mitre_attack:
+    - T1059
+  - id: AML.T0051
+    name: LLM PROMPT INJECTION
+    description: Adversaries may inject malicious prompts into Large Language Models
+      to manipulate their behavior or extract sensitive information.
+    outcome: LLM behavior manipulated through malicious prompt injection
+    mitre_attack:
+    - T1059.009
+  - id: AML.T0053
+    name: LLM PLUGIN COMPROMISE
+    description: Adversaries may compromise or abuse LLM plugins and extensions to
+      execute malicious code or access restricted functionality.
+    outcome: Malicious code executed through compromised LLM plugins
+    mitre_attack:
+    - T1072
+'TA0006: Persistence':
+  name: 'TA0006: Persistence'
+  description: The adversary is trying to maintain their foothold in AI systems and
+    ensure continued access.
+  tasks:
+  - id: AML.T0020
+    name: POISON TRAINING DATA
+    description: Adversaries may inject malicious data into training datasets to maintain
+      persistent influence over AI model behavior.
+    outcome: Persistent influence over AI model behavior through poisoned training
+      data
+    mitre_attack:
+    - T1565.001
+  - id: AML.T0018
+    name: MANIPULATE AI MODEL
+    description: Adversaries may directly modify AI model weights, parameters, or
+      architecture to maintain persistent access or influence.
+    outcome: Persistent access or influence maintained through direct AI model manipulation
+    mitre_attack:
+    - T1565.001
+  - id: AML.T0061
+    name: LLM PROMPT SELF-REPLICATION
+    description: Adversaries may embed persistent prompts or instructions within LLM
+      context to maintain influence over future interactions.
+    outcome: Persistent influence over LLM behavior through embedded prompts
+    mitre_attack:
+    - T1546
+  - id: AML.T0070
+    name: RAG POISONING
+    description: Adversaries may poison the knowledge base or retrieval sources used
+      by RAG systems to maintain persistent influence.
+    outcome: Persistent influence over RAG system outputs through poisoned knowledge
+      sources
+    mitre_attack:
+    - T1565.001
+'TA0007: Privilege Escalation':
+  name: 'TA0007: Privilege Escalation'
+  description: The adversary is trying to gain higher-level permissions or access
+    within AI systems and related infrastructure.
+  tasks:
+  - id: AML.T0053
+    name: LLM PLUGIN COMPROMISE
+    description: Adversaries may compromise LLM plugins to gain elevated privileges
+      or access to restricted system functionality.
+    outcome: Elevated privileges gained through compromised LLM plugins
+    mitre_attack:
+    - T1068
+  - id: AML.T0054
+    name: LLM JAILBREAK
+    description: Adversaries may use jailbreaking techniques to bypass LLM safety
+      measures and gain access to restricted capabilities.
+    outcome: Access to restricted LLM capabilities gained through jailbreaking techniques
+    mitre_attack:
+    - T1211
+'TA0008: Defense Evasion':
+  name: 'TA0008: Defense Evasion'
+  description: The adversary is trying to avoid being detected and evade AI-based
+    security controls and defenses.
+  tasks:
+  - id: AML.T0015
+    name: EVADE AI MODEL
+    description: Adversaries may craft inputs specifically designed to evade detection
+      by AI-based security models and defensive systems.
+    outcome: AI-based security controls successfully evaded through crafted inputs
+    mitre_attack:
+    - T1562.001
+  - id: AML.T0054
+    name: LLM JAILBREAK
+    description: Adversaries may use jailbreaking techniques to bypass LLM safety
+      measures and content filters to evade detection.
+    outcome: LLM safety measures bypassed to evade content filtering and detection
+    mitre_attack:
+    - T1562.001
+  - id: AML.T0067
+    name: LLM TRUSTED OUTPUT COMPONENTS MANIPULATION
+    description: Adversaries may manipulate trusted components of LLM outputs to evade
+      detection while maintaining malicious functionality.
+    outcome: Detection evaded through manipulation of trusted LLM output components
+    mitre_attack:
+    - T1036
+  - id: AML.T0068
+    name: LLM PROMPT OBFUSCATION
+    description: Adversaries may obfuscate malicious prompts using encoding, formatting,
+      or linguistic techniques to evade detection.
+    outcome: Malicious prompts successfully obfuscated to evade detection systems
+    mitre_attack:
+    - T1027
+  - id: AML.T0084
+    name: FALSE RAG ENTRY INJECTION
+    description: Adversaries may inject false entries into RAG knowledge bases to
+      evade detection while influencing system behavior.
+    outcome: False entries injected into RAG systems while evading detection mechanisms
+    mitre_attack:
+    - T1565.001
+  - id: AML.T0073
+    name: IMPERSONATION
+    description: Adversaries may impersonate legitimate users, entities, or AI agents
+      to evade detection and access controls.
+    outcome: Detection and access controls evaded through impersonation techniques
+    mitre_attack:
+    - T1036.005
+  - id: AML.T0074
+    name: MASQUERADING
+    description: Adversaries may disguise malicious AI components or data as legitimate
+      to evade detection mechanisms.
+    outcome: Malicious AI components successfully disguised to evade detection
+    mitre_attack:
+    - T1036
+  - id: AML.T0076
+    name: CORRUPT AI MODEL
+    description: Adversaries may subtly corrupt AI models to evade detection while
+      maintaining functionality for their purposes.
+    outcome: AI models corrupted while evading integrity checks and detection systems
+    mitre_attack:
+    - T1565.001
+'TA0009: Credential Access':
+  name: 'TA0009: Credential Access'
+  description: The adversary is trying to steal account names, passwords, and other
+    credentials for AI systems and services.
+  tasks:
+  - id: AML.T0055
+    name: UNSECURED CREDENTIALS
+    description: Adversaries may search for unsecured credentials in AI system configurations,
+      code repositories, or documentation.
+    outcome: Unsecured credentials obtained for AI systems and services
+'TA0010: Discovery':
+  name: 'TA0010: Discovery'
+  description: The adversary is trying to figure out AI system architecture, capabilities,
+    and environment information.
+  tasks:
+  - id: AML.T0013
+    name: DISCOVER AI MODEL ONTOLOGY
+    description: Adversaries may attempt to discover the ontology, structure, and
+      classification systems used by AI models.
+    outcome: AI model ontology and classification structure discovered
+  - id: AML.T0014
+    name: DISCOVER AI MODEL FAMILY
+    description: Adversaries may attempt to identify the family, type, and architecture
+      of AI models in use.
+    outcome: AI model family and architecture information discovered
+  - id: AML.T0007
+    name: DISCOVER AI ARTIFACTS
+    description: Adversaries may search for and identify AI artifacts such as models,
+      datasets, and configuration files.
+    outcome: AI artifacts and associated resources discovered
+  - id: AML.T0062
+    name: DISCOVER LLM HALLUCINATIONS
+    description: Adversaries may probe LLM systems to discover patterns of hallucination
+      and false information generation.
+    outcome: LLM hallucination patterns and vulnerabilities discovered
+  - id: AML.T0063
+    name: DISCOVER AI MODEL OUTPUTS
+    description: Adversaries may analyze AI model outputs to understand capabilities,
+      limitations, and potential attack vectors.
+    outcome: AI model output patterns and capabilities discovered
+  - id: AML.T0069
+    name: DISCOVER LLM SYSTEM INFORMATION
+    description: Adversaries may gather information about LLM system configuration,
+      versions, and implementation details.
+    outcome: LLM system configuration and implementation details discovered
+  - id: AML.T0075
+    name: CLOUD SERVICE DISCOVERY
+    description: Adversaries may attempt to discover cloud services and resources
+      used to host or support AI systems.
+    outcome: Cloud services and AI infrastructure discovered
+'TA0011: AI Artifact Collection':
+  name: 'TA0011: AI Artifact Collection'
+  description: The adversary is trying to gather AI-related data, models, and artifacts
+    of interest to their goals.
+  tasks:
+  - id: AML.T0036
+    name: DATA FROM INFORMATION REPOSITORIES
+    description: Adversaries may collect AI-related data from information repositories,
+      databases, and storage systems.
+    outcome: AI-related data collected from information repositories
+  - id: AML.T0037
+    name: DATA FROM LOCAL SYSTEM
+    description: Adversaries may search local systems for AI models, datasets, and
+      related artifacts to collect.
+    outcome: AI artifacts and data collected from local systems
+'TA0012: AI Attack Staging':
+  name: 'TA0012: AI Attack Staging'
+  description: The adversary is trying to prepare and stage AI-specific attacks and
+    malicious capabilities.
+  tasks:
+  - id: AML.T0005
+    name: CREATE PROXY AI MODEL
+    description: Adversaries may create proxy or shadow AI models to test attacks
+      and understand target model behavior.
+    outcome: Proxy AI model created for attack testing and reconnaissance
+  - id: AML.T0018
+    name: MANIPULATE AI MODEL
+    description: Adversaries may manipulate AI models during the staging phase to
+      prepare for deployment in target environments.
+    outcome: AI model manipulated and prepared for malicious deployment
+  - id: AML.T0042
+    name: VERIFY ATTACK
+    description: Adversaries may verify and test their AI attacks in staging environments
+      before deployment.
+    outcome: AI attacks verified and validated in staging environment
+  - id: AML.T0043
+    name: CRAFT ADVERSARIAL DATA
+    description: Adversaries may craft adversarial examples and malicious data samples
+      for use in attacks.
+    outcome: Adversarial data crafted and prepared for attack deployment
+'TA0013: Command and Control':
+  name: 'TA0013: Command and Control'
+  description: The adversary is trying to communicate with compromised AI systems
+    to control them.
+  tasks:
+  - id: AML.T0072
+    name: REVERSE SHELL
+    description: Adversaries may establish reverse shell connections through AI systems
+      to maintain command and control.
+    outcome: Command and control established through reverse shell connections
+'TA0014: Exfiltration':
+  name: 'TA0014: Exfiltration'
+  description: The adversary is trying to steal data, models, and sensitive information
+    from AI systems.
+  tasks:
+  - id: AML.T0024
+    name: EXFILTRATION VIA AI INFERENCE API
+    description: Adversaries may exfiltrate data by abusing AI inference APIs to extract
+      information embedded in models or systems.
+    outcome: Sensitive data exfiltrated through AI inference API abuse
+  - id: AML.T0025
+    name: EXFILTRATION VIA CYBER MEANS
+    description: Adversaries may exfiltrate AI models, data, and artifacts using traditional
+      cyber exfiltration methods.
+    outcome: AI artifacts and data exfiltrated using cyber exfiltration techniques
+  - id: AML.T0056
+    name: EXTRACT LLM SYSTEM PROMPT
+    description: Adversaries may extract system prompts and instructions from LLM
+      systems to understand their configuration.
+    outcome: LLM system prompts and configuration instructions extracted
+  - id: AML.T0057
+    name: LLM DATA LEAKAGE
+    description: Adversaries may exploit LLM vulnerabilities to cause data leakage
+      from training data or system information.
+    outcome: Sensitive data leaked from LLM systems through exploitation
+  - id: AML.T0077
+    name: LLM RESPONSE RENDERING
+    description: Adversaries may manipulate LLM response rendering to exfiltrate data
+      through crafted outputs.
+    outcome: Data exfiltrated through manipulated LLM response rendering
+'TA0015: Impact':
+  name: 'TA0015: Impact'
+  description: The adversary is trying to manipulate, interrupt, or destroy AI systems
+    and their data.
+  tasks:
+  - id: AML.T0015
+    name: EVADE AI MODEL
+    description: Adversaries may successfully evade AI model detections to achieve
+      their ultimate objectives without detection.
+    outcome: AI model detection successfully evaded enabling adversary objectives
+  - id: AML.T0029
+    name: DENIAL OF AI SERVICE
+    description: Adversaries may disrupt or deny access to AI services through resource
+      exhaustion or system overload.
+    outcome: AI service availability disrupted or denied to legitimate users
+  - id: AML.T0046
+    name: SPAMMING AI SYSTEM WITH CHAFF DATA
+    description: Adversaries may spam AI systems with chaff data to degrade performance
+      or hide malicious activities.
+    outcome: AI system performance degraded through chaff data injection
+  - id: AML.T0031
+    name: ERODE AI MODEL INTEGRITY
+    description: Adversaries may systematically erode AI model integrity through repeated
+      attacks or data corruption.
+    outcome: AI model integrity compromised through systematic erosion attacks
+  - id: AML.T0034
+    name: COST HARVESTING
+    description: Adversaries may abuse AI services to generate excessive costs for
+      the victim organization.
+    outcome: Excessive costs generated through AI service abuse
+  - id: AML.T0048
+    name: EXTERNAL HARMS
+    description: Adversaries may use compromised AI systems to cause harm to external
+      parties or society.
+    outcome: External harm caused through compromised AI system abuse
+  - id: AML.T0059
+    name: ERODE DATASET INTEGRITY
+    description: Adversaries may systematically corrupt or erode the integrity of
+      datasets used by AI systems.
+    outcome: Dataset integrity compromised through systematic corruption attacks

@@ -1,0 +1,104 @@
+'LLM01: Prompt Injection':
+  name: 'LLM01: Prompt Injection'
+  description: Manipulating LLMs via crafted inputs can lead to unauthorized access,
+    data breaches, and compromised decision-making.
+  tasks:
+  - id: LLM01
+    name: Detect Prompt Injection
+    description: Identify and mitigate prompt injection vulnerabilities in LLM applications.
+    outcome: LLM applications secured against prompt injection attacks.
+'LLM02: Insecure Output Handling':
+  name: 'LLM02: Insecure Output Handling'
+  description: Neglecting to validate LLM outputs may lead to downstream security
+    exploits, including code execution that compromises systems and exposes data.
+  tasks:
+  - id: LLM02
+    name: Validate LLM Outputs
+    description: Ensure LLM outputs are validated and sanitized to prevent security
+      vulnerabilities.
+    outcome: LLM outputs secured against potential exploits.
+    reason: Code issues might lead to insecure output handling and processing vulnerabilities
+'LLM03: Training Data Poisoning':
+  name: 'LLM03: Training Data Poisoning'
+  description: Tampered training data can impair LLM models leading to responses that
+    may compromise security, accuracy, or ethical behavior.
+  tasks:
+  - id: LLM03
+    name: Detect Training Data Poisoning
+    description: Identify and mitigate training data poisoning vulnerabilities in
+      LLM applications.
+    outcome: LLM training data secured against poisoning attacks.
+'LLM04: Model Denial of Service':
+  name: 'LLM04: Model Denial of Service'
+  description: Overloading LLMs with resource-heavy operations can cause service disruptions
+    and increased costs.
+  tasks:
+  - id: LLM04
+    name: Mitigate Model DoS
+    description: Implement measures to prevent denial of service attacks on LLM models.
+    outcome: LLM services resilient against denial of service attacks.
+'LLM05: Supply Chain Vulnerabilities':
+  name: 'LLM05: Supply Chain Vulnerabilities'
+  description: Depending upon compromised components, services or datasets undermine
+    system integrity, causing data breaches and system failures.
+  tasks:
+  - id: LLM05
+    name: Secure LLM Supply Chain
+    description: Identify and mitigate vulnerabilities in the LLM supply chain to
+      ensure integrity and security.
+    outcome: LLM supply chain secured against vulnerabilities.
+    reason: Poor code quality might introduce vulnerabilities in LLM supply chain
+      components
+'LLM06: Sensitive Information Disclosure':
+  name: 'LLM06: Sensitive Information Disclosure'
+  description: Failure to protect against disclosure of sensitive information in LLM
+    outputs can result in legal consequences or a loss of competitive advantage.
+  tasks:
+  - id: LLM06
+    name: Prevent Sensitive Data Leakage
+    description: Implement measures to prevent sensitive information disclosure in
+      LLM outputs.
+    outcome: LLM outputs secured against sensitive data leakage.
+    reason: Problematic files might expose sensitive information through insecure
+      implementation
+'LLM07: Insecure Plugin Design':
+  name: 'LLM07: Insecure Plugin Design'
+  description: LLM plugins processing untrusted inputs and having insufficient access
+    control risk severe exploits like remote code execution.
+  tasks:
+  - id: LLM07
+    name: Secure LLM Plugins
+    description: Ensure LLM plugins are designed securely to prevent vulnerabilities
+      and exploits.
+    outcome: LLM plugins secured against design vulnerabilities.
+    reason: High complexity functions might lead to insecure plugin design and implementation
+'LLM08: Excessive Agency':
+  name: 'LLM08: Excessive Agency'
+  description: Granting LLMs unchecked autonomy to take action can lead to unintended
+    consequences, jeopardizing reliability, privacy, and trust.
+  tasks:
+  - id: LLM08
+    name: Limit LLM Agency
+    description: Implement controls to limit the agency of LLMs and prevent unintended
+      actions.
+    outcome: LLM agency controlled to prevent unintended consequences.
+'LLM09: Overreliance':
+  name: 'LLM09: Overreliance'
+  description: Failing to critically assess LLM outputs can lead to compromised decision
+    making, security vulnerabilities, and legal liabilities.
+  tasks:
+  - id: LLM09
+    name: Assess LLM Outputs
+    description: Implement measures to critically assess and validate LLM outputs
+      before use.
+    outcome: LLM outputs validated to prevent overreliance issues.
+'LLM10: Model Theft':
+  name: 'LLM10: Model Theft'
+  description: Unauthorized access to proprietary large language models risks theft,
+    competitive advantage, and dissemination of sensitive information.
+  tasks:
+  - id: LLM10
+    name: Protect LLM Models
+    description: Implement measures to protect large language models from unauthorized
+      access and theft.
+    outcome: LLM models secured against unauthorized access and theft.
