@@ -68,6 +68,17 @@ filterwarnings = [
     "ignore::UserWarning",
     "ignore::DeprecationWarning",
 ]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "performance: marks tests as performance benchmarks",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+    "api: marks tests as API tests",
+    "function: marks tests as function tests",
+    "injection: marks tests as injection tests",
+    "security: marks tests as security tests",
+    "compliance: marks tests as compliance tests",
+]
 
 [tool.coverage.run]
 source = ["src/hydroxai"]
