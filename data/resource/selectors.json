@@ -36,5 +36,13 @@
     "send_button": "[intercom-composer-send-button e5mgu3j0 intercom-14suzfn etxngei0]",
     "response_steps": ["intercom-block-paragraph e16pl8n50 intercom-1483pmu"],
     "login_require": false
+  },
+    {
+    "url": "https://aws.amazon.com/chatbot/",
+    "chatbot_widget": ["interact-module__alwaysVisibleChat__Z1+LL interact-module__botIconContainer__Ghjjo"],
+    "input_steps": ["body-module__textareaInputAura__C53fp  body-module__homeScreen__6irmO"],
+    "send_button": ["chat-send-message-button"],
+    "response_steps": ["chat-bubble-message-text"],
+    "login_require": false
   }
 ]
