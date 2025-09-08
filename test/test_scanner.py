@@ -29,11 +29,11 @@ class TestScanner:
         """Test Scanner can be initialized with default and custom timeout."""
         # Test default initialization
         default_scanner = Scanner()
-        assert default_scanner.timeout == 60.0
+        assert -1e-6 < default_scanner.timeout - 60.0 < 1e-6
         
         # Test custom timeout
         custom_scanner = Scanner(timeout=45.0)
-        assert custom_scanner.timeout == 45.0
+        assert  -1e-6 < custom_scanner.timeout - 45.0 < 1e-6
     
     def test_scan_chatbot_basic_call(self, sample_url):
         """Test scan_chatbot method can be called without errors."""
