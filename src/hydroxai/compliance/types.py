@@ -2,6 +2,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List, Mapping, Optional, Union
 from abc import ABC, abstractmethod
 from enum import Enum
+import sys
 
 
 class VulnerabilityStatus(Enum):
@@ -12,7 +13,11 @@ class VulnerabilityStatus(Enum):
     ERROR = "error"
 
 
-@dataclass(slots=True)
+# Use slots=True only for Python 3.10+
+_dataclass_kwargs = {"slots": True} if sys.version_info >= (3, 10) else {}
+
+
+@dataclass(**_dataclass_kwargs)
 class PromptResponsePair:
     """A single prompt-response interaction pair.
     
@@ -28,7 +33,7 @@ class PromptResponsePair:
     metadata: Optional[Dict[str, Any]] = None
 
 
-@dataclass(slots=True)
+@dataclass(**_dataclass_kwargs)
 class JudgeAnalysis:
     """Analysis result from a judge model.
     
@@ -46,7 +51,7 @@ class JudgeAnalysis:
     metadata: Optional[Dict[str, Any]] = None
 
 
-@dataclass(slots=True)
+@dataclass(**_dataclass_kwargs)
 class BaseTestResult(ABC):
     """Base class for all test result types.
     
@@ -68,7 +73,7 @@ class BaseTestResult(ABC):
     metadata: Optional[Dict[str, Any]] = None
 
 
-@dataclass(slots=True)
+@dataclass(**_dataclass_kwargs)
 class StandardTestResult(BaseTestResult):
     """Standard test result for prompt injection, jailbreak, etc.
     
@@ -78,7 +83,7 @@ class StandardTestResult(BaseTestResult):
     pass
 
 
-@dataclass(slots=True)
+@dataclass(**_dataclass_kwargs)
 class HallucinationTestResult(BaseTestResult):
     """Specialized test result for hallucination detection.
     
@@ -96,7 +101,7 @@ class HallucinationTestResult(BaseTestResult):
     hallucination_details: Optional[Dict[str, Any]] = None
 
 
-@dataclass(slots=True)
+@dataclass(**_dataclass_kwargs)
 class BiasTestResult(BaseTestResult):
     """Specialized test result for bias detection.
     
@@ -122,7 +127,7 @@ class BiasTestResult(BaseTestResult):
             self.biased_responses = []
 
 
-@dataclass(slots=True)
+@dataclass(**_dataclass_kwargs)
 class ScanResult:
     """Comprehensive scan result containing multiple test results.
     
